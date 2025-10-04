@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '../components/heroSection'
+import HeroSection from '../components/HeroSection'
 import FeaturedSection from '../components/FeaturedSection'
 import TrailersSection from '../components/TrailersSection'
 
@@ -14,3 +14,4 @@ const Home = () => {
 }
 
 export default Home
+
