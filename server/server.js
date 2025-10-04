@@ -15,7 +15,17 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: [
+      "https://moviechale-2-0-frontend.onrender.com", // ✅ Allow your frontend
+      "http://localhost:5173" // ✅ Allow local dev (Vite default)
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  })
+);
+
 app.use(clerkMiddleware())
 
 await connectDB(); 
