@@ -4,7 +4,7 @@ import { useAuth, useUser } from "@clerk/clerk-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-axios.defaults.baseURL = "http://localhost:5000"
+axios.defaults.baseURL = "https://moviechale-2-0.onrender.com/"
 export const AppContext = createContext()
 
 export const AppProvider = ({ children }) => {
@@ -112,5 +112,6 @@ export const AppProvider = ({ children }) => {
         </AppContext.Provider>
     )
 }
+
 
 export const useAppContext = () => useContext(AppContext)
